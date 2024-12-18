@@ -1,0 +1,121 @@
+/* General styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: white;
+    background-color: lightblue;
+}
+
+main {
+    padding: 20px;
+    color: black;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #004466;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    align-items: center;
+}
+
+.navbar .menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar .menu ul li {
+    margin: 0 15px;
+    position: relative; /* Needed for the underline effect */
+}
+
+.navbar .menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s;
+    padding-bottom: 5px;
+}
+
+.navbar .menu ul li a:hover {
+    color: #ffd700;
+}
+
+.navbar .menu ul li a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #ffd700;
+    transition: width 0.3s ease;
+    margin: auto;
+}
+
+.navbar .menu ul li a:hover::after {
+    width: 100%; /* Expand underline on hover */
+}
+
+/* Content */
+.content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.content h2 {
+    color: #004466;
+    margin-top: 0;
+}
+
+.content ul {
+    padding-left: 20px;
+}
+
+.content ul li {
+    margin-bottom: 5px;
+}
+
+/* Footer */
+.footer {
+    background-color: #004466;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+.footer footer a {
+    text-decoration: none;
+    color: white;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.footer footer a:hover {
+    color: #ffd700;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar .menu ul {
+        flex-direction: column;
+        align-items: flex-end; /* Align links to the right */
+    }
+
+    .navbar .menu ul li {
+        margin: 10px 0;
+    }
+
+    .content {
+        margin: 10px;
+        padding: 15px;
+    }
+}
